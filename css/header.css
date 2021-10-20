@@ -1,0 +1,138 @@
+.header {
+    background-color: #A1B7C8;
+    min-height: 60px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    width: 124px;
+}
+.header__contacts {
+    /* display: none; */
+    position: absolute;
+    background-color: #A1B7C8;
+    top: 61px;
+    left: 0;
+    right: 0;
+    padding: 30px 15px;
+    color: #ffffff;
+}
+.contacts__item {
+    margin-bottom: 50px;
+}
+.contacts__item:last-child {
+    margin-bottom: 0;
+}
+.contacts__head {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+.contacts__head_social {
+    margin-bottom: 12px;
+}
+.contacts__link {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+}
+.contacts__social-list {
+    display: flex;
+    width: 26px;
+    height: 26px;
+}
+.contacts__social-item:not(:last-child) {
+    margin-right: 18px;
+
+}
+.contacts__social-link {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contacts__social-link_whatsapp {
+    background-image: url(../img/whatsapp.svg);
+}
+.contacts__social-link_instagram {
+    background-image: url(../img/instagram.svg);
+}
+.contacts__social-link_facebook {
+    background-image: url(../img/facebook.svg);
+}
+.contacts__social-link_telegram {
+    background-image: url(../img/telegram.svg);
+}
+.header__contacts-burger {
+    display: block;
+    width: 27px;
+    height: 14px;
+    background-image: url(../img/burger.svg);
+}
+
+@media (min-width: 768px) {
+    .header {
+        min-height: 100px;
+        padding: 28px 0;
+    }
+    .header__logo {
+        width: 180px;
+    }
+    .header__contacts {
+        top: 101px;
+        padding: 40px;
+    }
+    .contacts__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contacts__item {
+        margin: 0;
+    }
+    .contacts__social-list {
+        width: auto;
+        height: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        padding: 50px 0;
+    }
+    .header__container {
+        height: 100%;
+        flex-direction: column;
+    }
+    .header__contacts-burger {
+        display: none;
+    }
+    .contacts__list {
+       flex-direction: column;
+    }
+    .header__contacts {
+        position: static;
+    }
+    .contacts__item:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        padding-top: 60px;
+    }
+}
